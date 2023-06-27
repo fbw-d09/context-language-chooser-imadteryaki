@@ -1,11 +1,26 @@
-import React from 'react'
+
+import React from 'react';
+import { useState } from 'react';
+import { Router, Routes, Route } from 'react-router-dom';
+import { Header, Content, LanguageContext }  from './components';
+
 
 const App = () => {
-  return (
-    <div>
-      {/* Happy Coding starts here */}
-    </div>
-  )
-}
+  const [selectedLanguage, setSelectedLanguage] = useState('ENG');
 
-export default App
+  return (
+
+    <LanguageContext.Provider value={{ selectedLanguage, setSelectedLanguage }}>
+      <Router>
+        <div>
+          <Header />
+          <Routes>
+            <Route path="/" exact component={Content} />
+          </Routes>
+        </div>
+      </Router>
+    </LanguageContext.Provider>
+  );
+};
+
+export default App;
