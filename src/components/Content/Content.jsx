@@ -3,7 +3,7 @@ import { WelcomeMessage } from './WelcomeMessage';
 
 const Content = () => {
   return (
-    <div>
+    <div className="content">
       <WelcomeMessage />
     </div>
   );
