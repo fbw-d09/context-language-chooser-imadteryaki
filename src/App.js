@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Header, Content, LanguageContext } from './components';
+import { Header, Content} from './components';
+import { LanguageContext } from './context/LanguageContext';
 import './App.css';
 
 const App = () => {

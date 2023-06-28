@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import { LanguageContext } from '../../Header';
+import { LanguageContext } from '../../../context/LanguageContext';
 
 const WelcomeMessage = () => {
   const { selectedLanguage } = useContext(LanguageContext);
